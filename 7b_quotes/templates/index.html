@@ -1,0 +1,34 @@
+
+{% extends "layout.html" %}
+{% block title %}
+    Stock Quote
+{% endblock %}
+
+{% block main %}
+    <div class="container">
+        <table class="table">
+            <tr>
+                <th>Quote Date</th>
+                <th>Quote</th>
+                <th>Person Quoted</th>
+                <th> Type </th>
+                <th>ID </th>
+                <th></th>
+            </tr>
+            {% for result in results %}
+                <tr>
+                    <td>{{ result['date'] }}</td>
+                    <td>{{ result['quote'] }}</td>
+                    <td>{{ result['person'] }}</td>
+                    <td>{{ result['type'] }}</td>
+                    <td>{{result['id2']}}</td>
+                    <td><form action = "/voted">
+                    <button>Vote</button>
+                    </form>
+                    </td>
+                </tr>
+            {% endfor %}
+
+        </table>
+    </div>
+{% endblock %}
