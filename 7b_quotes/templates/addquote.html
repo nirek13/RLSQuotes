@@ -1,0 +1,26 @@
+
+   
+{% extends "layout.html" %}
+
+{% block title %}
+    Add Quote
+{% endblock %}
+
+{% block main %}
+    <form action="" method="post">
+        <fieldset>
+            <div class="form-group">
+                <input autocomplete="off" autofocus class="form-control" name="quote" placeholder="Quote" type="text"/>
+            </div>
+            <div class="form-group">
+                <input autocomplete="off" autofocus class="form-control" name="type" placeholder="Quote Type eg. Funny or Inspirational" type="text" />
+            </div>
+            <div class="form-group">
+                <input autocomplete="off" autofocus class="form-control" name="person" placeholder="Person Quoted" type="text" />
+            </div>
+            <div class="form-group">
+                <button class="btn btn-default" type="submit"> Add Quote</button>
+            </div>
+        </fieldset>
+    </form>
+{% endblock %}

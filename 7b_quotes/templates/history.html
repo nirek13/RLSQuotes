@@ -1,0 +1,26 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    History
+{% endblock %}
+
+{% block main %}
+    <div class="container">
+        <table class="table">
+            <tr>
+                <th>Date of Transaction</th>
+                <th>Stock Symbol</th>
+                <th>Qty. of Shares</th>
+                <th>Share Price</th>
+            </tr>
+            {% for stock in stocks %}
+                <tr>
+                    <td>{{ stock['date'] }}</td>
+                    <td>{{ stock['stock'].upper() }}</td>
+                    <td>{{ stock['quantity'] }}</td>
+                    <td>{{ stock['price'] | usd }}</td>
+                </tr>
+            {% endfor %}
+        </table>
+    </div>
+{% endblock %}
